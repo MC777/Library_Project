@@ -9,8 +9,9 @@
 <body>
 <div class="container">
 <jsp:include page="/WEB-INF/fragments/header.jspf"/>
+    <br><br><br>
     <form>
-        <table class="table table-bordered table-condensed col-md-12">
+        <table class="table-sm table thead-dark col-md-12">
             <thead>
             <tr>
                 <th>#</th>
@@ -32,7 +33,7 @@
                     <td>${book.title}</td>
                     <td>${book.isbn}</td>
                     <td>${book.authorName}</td>
-                    <td>${book.category}</td>
+                    <td>${book.bookType}</td>
                     <td>${book.release}</td>
                     <td>${book.pages}</td>
                     <td>${not empty book.borrowerName ? book.borrowerName : '-'}</td>

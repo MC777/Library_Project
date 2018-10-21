@@ -35,12 +35,12 @@ public class Book {
     @Column (name = "summary")
     private String summary;
 
+    @Enumerated(EnumType.STRING)
     @Column (name = "book_type")
     private BookType bookType;
 
     @Column (name = "is_borrow")
     private boolean isBorrow;
-
 
     public Long getBookId() {
         return bookId;

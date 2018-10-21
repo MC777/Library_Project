@@ -3,11 +3,11 @@ package pl.sdac.model;
 public enum BookType {
 
     SCIENCE_FICTION("Science Fiction"),
-    HORROR("Horror"),
-    ROMANCE("Romance"),
-    SCIENCE("Science"),
-    HISTORY("History"),
-    FANTASY("Fantasy");
+    HORROR("HORROR"),
+    ROMANCE("ROMANCE"),
+    SCIENCE("SCIENCE"),
+    HISTORY("HISTORY"),
+    FANTASY("FANTASY");
 
     private String text;
 

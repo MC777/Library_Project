@@ -17,6 +17,87 @@ public class BookDto {
     private boolean isBorrow;
     private String borrowerName;
 
-    public BookDto(Long bookId, String title, LocalDate release, String isbn, Author author, BookType bookType, Integer pages, boolean borrow, String summary, Author author1, Author author2) {
+    public BookDto(Long bookId, String title, LocalDate release, String isbn, String author, BookType bookType, Integer pages, boolean borrow){
+        this.id = bookId;
+        this.title = title;
+        this.release = release;
+        this.isbn = isbn;
+        this.authorName = author;
+        this.bookType = bookType;
+        this.pages = pages;
+        this.isBorrow = borrow;
+    }
+
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public LocalDate getRelease() {
+        return release;
+    }
+
+    public void setRelease(LocalDate release) {
+        this.release = release;
+    }
+
+    public String getIsbn() {
+        return isbn;
+    }
+
+    public void setIsbn(String isbn) {
+        this.isbn = isbn;
+    }
+
+    public String getAuthorName() {
+        return authorName;
+    }
+
+    public void setAuthorName(String authorName) {
+        this.authorName = authorName;
+    }
+
+    public BookType getBookType() {
+        return bookType;
+    }
+
+    public void setBookType(BookType bookType) {
+        this.bookType = bookType;
+    }
+
+    public Integer getPages() {
+        return pages;
+    }
+
+    public void setPages(Integer pages) {
+        this.pages = pages;
+    }
+
+    public boolean isBorrow() {
+        return isBorrow;
+    }
+
+    public void setBorrow(boolean borrow) {
+        isBorrow = borrow;
+    }
+
+    public String getBorrowerName() {
+        return borrowerName;
+    }
+
+    public void setBorrowerName(String borrowerName) {
+        this.borrowerName = borrowerName;
     }
 }

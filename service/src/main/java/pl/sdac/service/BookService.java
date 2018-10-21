@@ -5,10 +5,13 @@ package pl.sdac.service;
 import pl.sdac.dto.BookDto;
 import pl.sdac.model.Book;
 import pl.sdac.model.BookType;
+import pl.sdac.model.Borrow;
+import pl.sdac.model.Borrower;
 import pl.sdac.repository.BookRepository;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 
@@ -21,10 +24,10 @@ public class BookService {
 
         return books.stream()
                 .map(b->{
-                    String borrowName = findCurrentBorrower(b);
+                   // String borrowName = findCurrentBorrower(b);
                    // Long borrowId = findCurrentBorrowId(b);
-                    Long borrowId = null;
-                    return new BookDto(b.getBookId(), b.getTitle(), b.getRelease(), b.getIsbn(), b.getAuthor(), b.getBookType(), b.getPages(), b.isBorrow(), b.getSummary(),b.getAuthor(),b.getAuthor());
+                   // Long borrowId = null;
+                    return new BookDto(b.getBookId(), b.getTitle(), b.getRelease(), b.getIsbn(), b.getAuthor().getFirstName(), b.getBookType(), b.getPages(), b.isBorrow());
                 }).collect(Collectors.toList());
 
     }
